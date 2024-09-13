@@ -9,7 +9,7 @@ export default function Home() {
     
     const router = useRouter();
     const {id} = router.query;
-    const [filteredUsers, setFilteredUsers] = useState([]);
+    
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -28,7 +28,7 @@ export default function Home() {
     }, [id]);
 
 
-    
+    const [filteredUsers, setFilteredUsers] = useState([]);
     return (
         <>
             {/* Navbar is placed here */}
